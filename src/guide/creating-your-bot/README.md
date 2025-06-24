@@ -11,19 +11,19 @@ In this section, we will create the main file for your bot. This file will be th
 Here's the base code to get you started:
 
 ```js
-const { Client } = require('whatsapp-web.js');
+const { wa } = require('whatsapp-web.js');
 
 // Create a new client instance
-const client = new Client();
+const client = new wa.Client();
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
-    console.log('Client is ready!');
+    console.log(Client is ready!');
 });
 
 // When the client received QR-Code
 client.on('qr', (qr) => {
-    console.log('QR RECEIVED', qr);
+    console.log('QR Code', qr);
 });
 
 // Start your client
@@ -61,7 +61,7 @@ pnpm add qrcode-terminal
 And now we'll modify our code to use this new module:
 
 ```js {2,11}
-const { Client } = require('whatsapp-web.js');
+const { wa } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
 const client = new Client();
